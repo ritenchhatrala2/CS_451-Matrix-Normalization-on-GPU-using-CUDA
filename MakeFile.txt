@@ -1,0 +1,22 @@
+all:		GPUMatrixNorm.cu  gpu.c
+
+
+sequential:
+	
+
+		gcc gpu.c -o gpu
+		./gpu
+		./gpu 2000
+
+parallel:
+
+		nvcc GPUMatrixNorm.cu –o GPUMatrixNorm
+		./GPUMatrixNorm  2000 512
+	
+
+clean:	
+	rm 
+GPUMatrixNorm  	rm 
+
+
+gpu
